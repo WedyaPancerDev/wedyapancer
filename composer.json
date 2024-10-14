@@ -1,0 +1,22 @@
+{
+  "name": "wedyapancer/wedyapancer",
+  "description": "Open Source Library Wedya Pancer",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Wedyapancer\\Wedyapancer\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "atheo810",
+      "email": "atheos810@gmail.com"
+    },
+    {
+      "name": "radespratama",
+      "email": "radespratamaa@gmail.com"
+    }
+  ],
+  "require": {}
+}
