@@ -5,7 +5,7 @@ namespace Wedyapancer\Wedyapancer\Helpers;
 
 class Text
 {
-    public function removeSpecialChars($string)
+    public static function removeSpecialChars($string)
     {
         $string = str_replace(' ', '_', $string);
         return preg_replace('/[^A-Za-z0-9_.]/', '', $string);
@@ -17,7 +17,7 @@ class Text
      * 
      * @return string
      */
-    public function generateIdCardNumber(): string
+    public static function generateIdCardNumber(): string
     {
         $randomNumber = mt_rand(1000, 9999);
         $getUnix = time();
