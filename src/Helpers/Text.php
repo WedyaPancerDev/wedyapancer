@@ -5,7 +5,7 @@ namespace Wedyapancer\Wedyapancer\Helpers;
 
 class Text
 {
-    public function removeSpecialChars($string)
+    public static function removeSpecialChars($string)
     {
         $string = str_replace(' ', '_', $string);
         return preg_replace('/[^A-Za-z0-9_.]/', '', $string);
@@ -17,11 +17,26 @@ class Text
      * 
      * @return string
      */
-    public function generateIdCardNumber(): string
+    public static function generateIdCardNumber(): string
     {
         $randomNumber = mt_rand(1000, 9999);
         $getUnix = time();
 
         return $getUnix . $randomNumber;
+    }
+
+    /**
+     * Generate Full Random file name text
+     * 
+     * @param string $name
+     * @return string 
+     */
+    public static function generateRandomFileName(string $name = "jpg"): string
+    {
+
+        $uniq = uniqid("w");
+        $result = $uniq . "." . $name;
+
+        return $result;
     }
 }
