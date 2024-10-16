@@ -24,4 +24,19 @@ class Text
 
         return $getUnix . $randomNumber;
     }
+
+    /**
+     * Generate Full Random file name text
+     * 
+     * @param string $name
+     * @return string 
+     */
+    public static function generateRandomFileName(string $name = "jpg"): string
+    {
+
+        $uniq = uniqid("w");
+        $result = $uniq . "." . $name;
+
+        return $result;
+    }
 }
